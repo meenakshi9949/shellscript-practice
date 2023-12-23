@@ -3,10 +3,10 @@ ID=$(id -u)
 VALIDATE(){
 if [ $1 -ne 0 ] 
 then 
-echo "error:: $2.... is failure"
+echo "error:: $2 $3.... is failure"
 exit 1
 else 
-echo "$2... is success"
+echo "$2 $3... is success"
 fi
 }
 
@@ -23,5 +23,5 @@ yum install mysql -y
 VALIDATE $? installing mysql
 
 yum install git -y 
-VALIDATE $? installing  git
+VALIDATE $? installing git
 
