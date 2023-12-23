@@ -11,7 +11,7 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then 
     echo -e " $2...IS $R FAILURE $R "
-    exit 1
+    
     else 
     echo "$2 ...is $G success $N"
     fi
