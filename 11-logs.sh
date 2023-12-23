@@ -4,8 +4,8 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 echo "$TIMESTAMP"
 ID=$(id -u)
 
-
-
+LOGFILE="/tmp/$0-$TIMESTAMP.log"
+echo "$LOGFILE"
 VALIDATE(){
 if [ $1 -ne 0 ] 
 then 
