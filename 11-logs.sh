@@ -1,5 +1,9 @@
-#!/bin/bash 
+#!/bin/bash
+
 ID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+echo "$TIMESTAMP"
+
 VALIDATE(){
 if [ $1 -ne 0 ] 
 then 
@@ -23,4 +27,3 @@ VALIDATE $? installing mysql
 
 yum install git -y 
 VALIDATE $? installing git
-
