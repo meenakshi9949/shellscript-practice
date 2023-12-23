@@ -25,5 +25,5 @@ then
 echo "error:: installing mysql is failure"
 exit 1
 else 
-echo "installing mysql is success"
+echo "installing git is success"
 fi
