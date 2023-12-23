@@ -27,7 +27,7 @@ echo "you are root user"
 fi 
 
 yum install mysql -y 
-VALIDATE $? installing mysql &>> $LOGFILE 
+VALIDATE $? "installing mysql" &>> $LOGFILE 
 
 yum install git -y &>> $LOGFILE 
-VALIDATE $? installing git
+VALIDATE $? "installing git"
