@@ -1,5 +1,7 @@
 #!/bin/bash
-
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 TIMESTAMP=$(date +%F-%H-%M-%S)
 echo "$TIMESTAMP"
 ID=$(id -u)
@@ -9,10 +11,10 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 VALIDATE(){
 if [ $1 -ne 0 ] 
 then 
-echo "error:: $2 $3.... is failure"  
+echo -e "$R error:: $2 $3.... is failure $N"  
 exit 1
 else 
-echo "$2 $3... is success"
+echo -e " $G $2 $3... is success $N"
 fi
 }
 
