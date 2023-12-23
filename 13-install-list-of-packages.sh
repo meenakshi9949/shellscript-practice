@@ -27,11 +27,11 @@ fi
 
 for package in $@ 
 do
-yum list installed $PACKAGE &>> $LOGFILE
+yum list installed $package &>> $LOGFILE
 if [ $? -ne 0 ]
 then 
 yum install $package -y &>> $LOGFILE
-VALIDATE $? "INSTAALLATION OF $PACKAGE"
+VALIDATE $? "INSTAALLATION OF $package"
 else 
 echo -e "$N $package IS already installed...$Y skipping"
 fi    
